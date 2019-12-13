@@ -18,7 +18,7 @@ for j in range(len(list)):
         list[j][k] = ans
 
 
-while win <= 2 or lose <= 10:
+while win < 2 or lose < 10:
 
     for a in range(len(list2)):
         for b in range(len(list2[j])):
