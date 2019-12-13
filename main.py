@@ -30,6 +30,14 @@ while win < 2 or lose < 10:
     ans1 = int(input("행 :"))
     ans2 = int(input("열 :"))
 
+    if ans1 < 0 or ans1 > 2 or ans2 < 0 or ans2 > 3:
+        print("잘못 입력하였습니다 다시 입력해 주십시오 행 0~2, 열 0~3")
+        ans1 = int(input("행 :"))
+        ans2 = int(input("열 :"))
+    elif ans1 == ans1 or ans2 == ans2:
+        print("중복된 행렬입니다. 다시입력해 주세요")
+        ans1 = int(input("행 :"))
+        ans2 = int(input("열 :"))
     print(f"[{ans1}][{ans2}] 열을 입력하였습니다.")
     print("정답을 입력해주세요")
     ans3 = int(input("답 :"))
