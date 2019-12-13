@@ -1,11 +1,13 @@
 # Create List
 
 ns = "\n"
-
 cle = " "
 
 win = 0
 lose = 0
+
+ansd1 = []
+ansd2 = []
 
 list = [[0]*4 for i in range(3)]
 list2 = [['?']*4 for q in range(3)]
@@ -18,7 +20,7 @@ for j in range(len(list)):
         list[j][k] = ans
 
 
-while win < 2 or lose < 10:
+while win < 2 and lose < 10:
 
     for a in range(len(list2)):
         for b in range(len(list2[j])):
@@ -34,11 +36,17 @@ while win < 2 or lose < 10:
         print("잘못 입력하였습니다 다시 입력해 주십시오 행 0~2, 열 0~3")
         ans1 = int(input("행 :"))
         ans2 = int(input("열 :"))
-    elif ans1 == ans1 or ans2 == ans2:
+
+    if ans1 in ansd1 and ans2 in ansd2:
         print("중복된 행렬입니다. 다시입력해 주세요")
         ans1 = int(input("행 :"))
         ans2 = int(input("열 :"))
+
     print(f"[{ans1}][{ans2}] 열을 입력하였습니다.")
+
+    ansd1.append(ans1)
+    ansd2.append(ans2)
+
     print("정답을 입력해주세요")
     ans3 = int(input("답 :"))
 
